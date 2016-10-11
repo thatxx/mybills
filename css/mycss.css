@@ -1,0 +1,92 @@
+		body{
+			font-family: Verdana,"Microsoft YaHei", sans-serif;
+			margin: 0px;
+			padding: 0px;
+			background-color: #F9F9F9;
+		}
+		.myhead{
+			height: 300px;
+			background: linear-gradient(to bottom right ,#CC00CC,#6600EE);
+		}
+		.mynav{
+			height: 125px;
+			padding-top: 25px;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			list-style: none;
+			text-align: center;
+		}
+		.mynav a:hover,
+		.mynav a:focus{
+			border-bottom-color: #F5F5F5;
+			border-bottom: solid 2px;
+		}
+		.mynav div.active a,
+		.mynav div.active a:focus,
+		.mynav div.active a:hover{
+			border-bottom-color: #FFFFFF;
+			border-bottom: solid 2px;
+		}
+		.mynav a{
+			color: #F9F9F9;
+			font-size: 20pt;
+  			margin-left: auto;
+			margin-right: auto;
+			padding-bottom: 10px;
+		}
+		.mynav a:hover,
+		.mynav a:focus {
+  			text-decoration: none;
+		}
+		.mynav span{
+			display:block; 
+			position:absolute; 
+			width:0px; 
+			height:0px; 
+			background:#F9F9F9; 
+			top:99%; 
+			left:50%;
+		}
+		div.title{
+			font-size: 16pt;
+			color: #9966CC;
+		}
+		div.item{
+			padding-top: 35px;
+			font-size: 18pt;
+			margin-top: 20px;
+			background-color: #FFFFFF;
+			height: 100px;
+			border-radius: 10px;
+			color: #777;
+		}
+		div.income{
+			color: #669999;
+		}
+		div.pay{
+			color: #CC6666;
+		}
+		.headicon{
+			margin-left: 50px;
+			width: 50px;
+			height: 50px;
+			background-image: url(../img/icon-记账.png);
+			background-size: 100%;
+		}
+		.profileicon{
+			margin-left: auto;
+			margin-right: auto;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background-image: url(../img/QQ截图20161008214804.png);
+			background-size: 100%;
+		}
+		div.mycon{
+			padding-top: 75px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 75px;
+			position: relative;
+		}
