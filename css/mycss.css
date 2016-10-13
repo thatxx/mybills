@@ -4,11 +4,46 @@
 			padding: 0px;
 			background-color: #F9F9F9;
 		}
+		.mynav .in{
+			background-color: white!important;
+			box-shadow: 0px 0px 5px #777;
+		}
+		.mynav a{
+			color: #F5F5F5!important;
+		}
+		nav.mynav{
+			padding-left: 3%;
+			padding-right: 3%;
+			height: 70px;
+			padding-top: 10px;
+			background-color: rgba(255,255,255,0.08);
+			font-size: 18px;
+			border: 0px;
+		}
+		nav.mynav a:hover{
+			color: #6699CC!important;
+		}
+		ul.myul li{
+			position: relative;
+		}
+		ul.myul li span{
+			display:block; 
+			position:absolute; 
+			width:0px; 
+			height:0px; 
+			background:#6699CC; 
+			top:95%; 
+			left:50%;
+		}
+		ul.myul li:hover .dropdown-menu{
+			display: block;
+		}
+		
 		.myhead{
 			height: 300px;
 			background: linear-gradient(to bottom right ,#0099CC,#6699CC);
 		}
-		.mynav{
+		.notenav{
 			height: 125px;
 			padding-top: 25px;
 			margin-left: auto;
@@ -17,29 +52,29 @@
 			list-style: none;
 			text-align: center;
 		}
-		.mynav a:hover,
-		.mynav a:focus{
+		.notenav a:hover,
+		.notenav a:focus{
 			border-bottom-color: #F5F5F5;
 			border-bottom: solid 2px;
 		}
-		.mynav div.active a,
-		.mynav div.active a:focus,
-		.mynav div.active a:hover{
+		.notenav div.active a,
+		.notenav div.active a:focus,
+		.notenav div.active a:hover{
 			border-bottom-color: #FFFFFF;
 			border-bottom: solid 2px;
 		}
-		.mynav a{
+		.notenav a{
 			color: #F9F9F9;
 			font-size: 20pt;
   			margin-left: auto;
 			margin-right: auto;
 			padding-bottom: 10px;
 		}
-		.mynav a:hover,
-		.mynav a:focus {
+		.notenav a:hover,
+		.notenav a:focus {
   			text-decoration: none;
 		}
-		.mynav span{
+		.notenav span{
 			display:block; 
 			position:absolute; 
 			width:0px; 
@@ -95,9 +130,40 @@
 			position: relative;
 		}
 		
+		div.foot{
+			border-top: 1px solid #F5F5F5;
+			padding-top: 30px;
+			height: 80px;
+			margin-left: 5%;
+			margin-right: 5%;
+			color: #F5F5F5;
+		}
+		.indexicon{
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			background-image: url(../img/icon-记账.png) ;
+			background-size: 100%;
+		}
+		.indexrow{
+			height: 700px;
+			padding-top: 120px;
+		}
+		.indexintro{
+			margin-left: 25%;
+			margin-top: 45px;
+			color: #F5F5F5;
+		}
+		.indexintro p.title{
+			line-height: 145%;
+			font-size: 20pt;
+		}
+		.indexintro p{
+			line-height: 145%;
+			font-size: 17pt;
+		}
 		.sign{
 			margin: auto;
-			margin-top: 100px;
 			position: relative;
 			transform-style: preserve-3d;
 			perspective: 1000;
@@ -186,6 +252,15 @@
 			display: block;
 			width: 100%;
 			text-align: center;
+		}
+		.sign span.change{
+			font-weight: bold;
+		}
+		.sign span.change a{
+			color: #F5F5F5;
+		}
+		.sign span.change a:hover{
+			color: #99CCFF;
 		}
 		.sign a{
 			color: #0066CC;

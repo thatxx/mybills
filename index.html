@@ -6,11 +6,118 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/mycss.css"/>
 		<script src="js/jquery-3.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<style type="text/css">
-		
+		body{
+			background-color: #3273bf;
+		}
 	</style>
+	<script type="text/javascript">
+		//		导航栏下划线特效
+		$(function(){
+			$('ul.myul li').hover(function(){
+				$('span',this).stop().css('height','2px');
+				$('span',this).animate({
+					left:'0',
+					width:'100%',
+					right:'0'
+				},200);
+			},function(){
+				$('span',this).stop().animate({
+					left:'50%',
+					width:'0'
+				},200);
+			});
+		});
+		function sign(){
+			$(".sign").toggleClass("flip");
+		}
+	</script>
 	<body>
+		<script src="js/index_canvas.js"></script>
+		<nav class="navbar navbar-default mynav" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><i class="indexicon"></i> myBills</a>
+		    </div>
 		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right myul">
+		        <li><a href="#">Features</a><span></span></li>
+		        <li><a href="#">FAQ</a><span></span></li>
+		        <li><a href="#">Contact</a><span></span></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="row indexrow">
+			<div class="col-lg-7 col-md-7 hidden-sm hidden-xs ">
+				<div class="indexintro">
+					<p class="title">Personal bills</p>
+					<p class="title">Note your days</h3>
+					<p>&emsp;&emsp;add comments</p>
+					<p>&emsp;&emsp;accurately query</p>
+					<p>&emsp;&emsp;statistical analysis</p>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+				<div class="sign" id="sign">
+					<div class="signin">
+						<form action="" class="signchild" method="post">
+							<div class="">
+								<input type="email" name="email" id="email" required="required" placeholder=" "/>
+								<label for="email">Email</label>
+							</div>
+							<div class="">
+								<input type="password" name="pw" id="pw" required="required" placeholder=" "/>
+								<label for="pw">Password</label>
+							</div>
+							<div class="">
+								<button type="submit" class="signbtn">Sign in</button>
+							</div>
+							<span><a href="">FORGOT PASSWORD?</a></span>
+						</form>
+						<span class="change"><a href="javascript:void(0)" onclick="sign()">DON'T HAVE AN ACCOUNT?</a></span>
+					</div>
+					<div class="signup ">
+						<form action="" class="signchild" method="post">
+							<div class="">
+								<input type="email" name="email" id="email" required="required" placeholder=" "/>
+								<label for="email">Email</label>
+							</div>
+							<div class="">
+								<input type="password" name="pw" id="pw" required="required" placeholder=" "/>
+								<label for="pw">Password</label>
+							</div>
+							<div class="">
+								<input type="text" name="nickname" id="nickname" required="required" placeholder=" "/>
+								<label for="nickname">nickname</label>
+							</div>
+							<div class="">
+								<button type="submit" class="signbtn">Sign up</button>
+							</div>
+						</form>
+						<span class="change"><a href="javascript:void(0)" onclick="sign()">HAVE AN ACCOUNT?</a></span>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="foot">
+			<div class="row">
+				<div class="col-md-4">
+					<span>Copyright © thatxx,All Rights Reserved </span>
+				</div>
+				
+			</div>
+		</div>
 	</body>
 </html>
