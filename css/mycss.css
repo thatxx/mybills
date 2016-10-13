@@ -6,7 +6,7 @@
 		}
 		.myhead{
 			height: 300px;
-			background: linear-gradient(to bottom right ,#CC00CC,#6600EE);
+			background: linear-gradient(to bottom right ,#0099CC,#6699CC);
 		}
 		.mynav{
 			height: 125px;
@@ -50,7 +50,7 @@
 		}
 		div.title{
 			font-size: 16pt;
-			color: #9966CC;
+			color: #6699CC;
 		}
 		div.item{
 			padding-top: 35px;
@@ -93,6 +93,107 @@
 			padding-right: 20px;
 			padding-bottom: 75px;
 			position: relative;
+		}
+		
+		.sign{
+			margin: auto;
+			margin-top: 100px;
+			position: relative;
+			transform-style: preserve-3d;
+			perspective: 1000;
+			transition: 1s;
+			width: 360px;
+			height: 500px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.signin{
+			z-index: 5;
+			position: absolute;
+			backface-visibility: hidden;
+		}
+		.signup{
+			position: absolute;
+			backface-visibility: hidden;
+			transform: rotateY(180deg);
+		}
+		.flip{
+			transform: rotateY(180deg);
+		}
+		.signchild{
+			position: relative;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 30px;
+			background-color: #FFFFFF;
+			width: 300px;
+			height: 320px;
+			border-radius: 5px;
+		}
+		.sign form > div{
+			position: relative;
+			height: 70px;
+			padding-top: 15px;
+		}
+		.sign label{
+			z-index: 5;
+			position: absolute;
+			display: block;
+			top: 20px;
+			color: #ADADAD;
+			font-weight: lighter;
+			transition: all 0.2s;
+		}
+		.sign input:not(:placeholder-shown) + label{
+			top:0px;
+		}
+		.sign input{
+			bottom: 0px;
+			height: 35px;
+			display: block;
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #DDDDDD;
+			outline: none;
+		}
+		.sign input:hover,
+		.sign input:focus{
+			border-bottom: 2px solid #0066CC;
+		}
+		.sign input:focus + label{
+			color: #0066CC;
+			top:0px;
+		}
+		button.signbtn{
+			display: block;
+			width: 100%;
+			background-color: #FFFFFF;
+			color: #0066CC;
+			border: 1px solid #0066CC;
+  			padding: 10px 16px;
+  			font-size: 18px;
+  			line-height: 1.3333333;
+  			border-radius: 6px;
+		}
+		button.signbtn:hover,
+		button.signbtn:focus{
+			background-color: #0066CC;
+			color: #FFFFFF;
+			border: 1px solid #FFFFFF;
+		}
+		.sign span{
+			margin-top: 15px;
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		.sign a{
+			color: #0066CC;
+			opacity: 0.9;
+		}
+		.sign a:hover,
+		.sign a:focus{
+			text-decoration: none;
 		}
 		@keyframes loading-spinner {
 		  from {
