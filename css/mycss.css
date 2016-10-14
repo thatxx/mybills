@@ -20,8 +20,21 @@
 			font-size: 18px;
 			border: 0px;
 		}
+		nav.mynav .icon-bar{
+			background-color: #F5F5F5!important;
+		}
+		nav.mynav .icon-bar:hover{
+			background-color: #F5F5F5!important;
+		}
+		nav.mynav .navbar-toggle{
+			background-color:;
+		}
+		nav.mynav .navbar-toggle:hover,
+		nav.mynav .navbar-toggle:hover{
+			background-color:#3273bf!important;
+		}
 		nav.mynav a:hover{
-			color: #6699CC!important;
+			color: #99CCFF!important;
 		}
 		ul.myul li{
 			position: relative;
@@ -31,7 +44,7 @@
 			position:absolute; 
 			width:0px; 
 			height:0px; 
-			background:#6699CC; 
+			background:#99CCFF; 
 			top:95%; 
 			left:50%;
 		}
@@ -130,6 +143,9 @@
 			position: relative;
 		}
 		
+		.mobilefix{
+			height: 45px;
+		}
 		div.foot{
 			border-top: 1px solid #F5F5F5;
 			padding-top: 30px;
@@ -146,8 +162,8 @@
 			background-size: 100%;
 		}
 		.indexrow{
-			height: 700px;
-			padding-top: 120px;
+			height: 520px;
+			padding-top: 80px;
 		}
 		.indexintro{
 			margin-left: 25%;
@@ -161,6 +177,9 @@
 		.indexintro p{
 			line-height: 145%;
 			font-size: 17pt;
+		}
+		.indexintro p:hover{
+			cursor: default;
 		}
 		.sign{
 			margin: auto;
