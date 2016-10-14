@@ -54,11 +54,17 @@
 		
 		.myhead{
 			height: 300px;
-			background: linear-gradient(to bottom right ,#0099CC,#6699CC);
+			padding-top: 0px;
+			/*background: linear-gradient(to bottom right ,#0099CC,#6699CC);*/
+			background-color: rgba(50,115,191,0.9);
+		}
+		.bigheadicon{
+			background-image: url(../img/QQ截图20161008214804.png);
+			background-position: center;
 		}
 		.notenav{
-			height: 125px;
-			padding-top: 25px;
+			height: 120px;
+			padding-top: 30px;
 			margin-left: auto;
 			margin-right: auto;
 			position: relative;
@@ -78,7 +84,7 @@
 		}
 		.notenav a{
 			color: #F9F9F9;
-			font-size: 20pt;
+			font-size: 20px;
   			margin-left: auto;
 			margin-right: auto;
 			padding-bottom: 10px;
@@ -97,12 +103,12 @@
 			left:50%;
 		}
 		div.title{
-			font-size: 16pt;
+			font-size: 16px;
 			color: #6699CC;
 		}
 		div.item{
 			padding-top: 35px;
-			font-size: 18pt;
+			font-size: 18px;
 			margin-top: 20px;
 			background-color: #FFFFFF;
 			height: 100px;
@@ -131,14 +137,15 @@
 			margin-right: auto;
 			width: 150px;
 			height: 150px;
-			border-radius: 50%;
+			border-radius: 100%;
 			background-image: url(../img/QQ截图20161008214804.png);
-			background-size: 100%;
+			background-size: cover;
+			background-position: center;
 		}
 		div.mycon{
 			padding-top: 75px;
-			padding-left: 20px;
-			padding-right: 20px;
+			padding-left: 5%;
+			padding-right: 5%;
 			padding-bottom: 75px;
 			position: relative;
 		}
@@ -153,6 +160,14 @@
 			margin-left: 5%;
 			margin-right: 5%;
 			color: #F5F5F5;
+		}
+		div.foot-black{
+			border-top: 1px solid #D4D4D4;
+			padding-top: 30px;
+			height: 80px;
+			margin-left: 5%;
+			margin-right: 5%;
+			color: #ADADAD;
 		}
 		.indexicon{
 			display: inline-block;
