@@ -55,6 +55,7 @@
 		.myhead{
 			height: 300px;
 			padding-top: 0px;
+			margin-bottom: 90px;
 			/*background: linear-gradient(to bottom right ,#0099CC,#6699CC);*/
 			background-color: rgba(50,115,191,0.9);
 		}
@@ -71,28 +72,32 @@
 			list-style: none;
 			text-align: center;
 		}
-		.notenav a:hover,
-		.notenav a:focus{
-			border-bottom-color: #F5F5F5;
-			border-bottom: solid 2px;
-		}
-		.notenav div.active a,
-		.notenav div.active a:focus,
-		.notenav div.active a:hover{
-			border-bottom-color: #FFFFFF;
-			border-bottom: solid 2px;
-		}
 		.notenav a{
 			color: #F9F9F9;
-			font-size: 20px;
+			font-size: 22px;
   			margin-left: auto;
 			margin-right: auto;
 			padding-bottom: 10px;
 		}
 		.notenav a:hover,
-		.notenav a:focus {
+		.notenav a:focus{
+			color: #EEEEEE;
   			text-decoration: none;
 		}
+		.notenav div.active a,
+		.notenav div.active a:focus,
+		.notenav div.active a:hover{
+			font-weight: bold;
+		}
+		.notenav div.active:after{
+			content: " ";
+			display: block;
+			width:6px;height:6px;
+			border-radius: 6px;
+			background-color: #F9F9F9;
+			margin: auto;
+		}
+		
 		.notenav span{
 			display:block; 
 			position:absolute; 
@@ -103,8 +108,22 @@
 			left:50%;
 		}
 		div.title{
-			font-size: 16px;
-			color: #6699CC;
+			font-size: 18px;
+			color: #3273BF;
+		}
+		div.title .titletr{
+			position: relative;
+			cursor: pointer;width: auto!important;
+		}
+		div.chevron{
+			margin-left: 10px;
+			position: relative;
+			display: inline-block;
+		}
+		div.chevron span{
+			opacity: 0.5;
+			position: absolute;
+			font-size: 12px;
 		}
 		div.item{
 			padding-top: 35px;
@@ -119,6 +138,7 @@
 		div.item:hover{
 			box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 		}
+		
 		div.income{
 			color: #669999;
 		}
@@ -143,11 +163,56 @@
 			background-position: center;
 		}
 		div.mycon{
-			padding-top: 75px;
+			padding-top: 20px;
 			padding-left: 5%;
 			padding-right: 5%;
-			padding-bottom: 75px;
+			padding-bottom: 20px;
 			position: relative;
+		}
+		#chart-area{
+			font-size: 18px;
+			background-color: #FFFFFF;
+			border-top: 2px solid #3273BF;
+			border-radius: 5px;
+			color: #777;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+		}
+		div.sumitem{
+			padding-top: 25px;
+			padding-left: 25px;
+			width: 250px;
+			height: 250px;
+			margin: auto;
+			margin-top: 20px;
+			font-size: 18px;
+			background-color: #FFFFFF;
+			border-top: 2px solid #3273BF;
+			height: 100px;
+			border-radius: 5px;
+			color: #777;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+			cursor: pointer;
+		}
+		div.sumitem:hover{
+			box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+		}
+		.sumspan{
+			padding-top: 15px;
+			padding-bottom: 15px;
+			text-align: center;
+		}
+		.sa{
+			display: block;
+			font-size: 20px;
+			font-weight: bolder;
+			color: #777;
+		}
+		.sb{
+			line-height: 30px;
+			display: block;
+			font-size: 16px;
+			font-weight: lighter;
+			color: #777;
 		}
 		
 		.mobilefix{
@@ -162,6 +227,7 @@
 			color: #F5F5F5;
 		}
 		div.foot-black{
+			margin-top: 60px;
 			border-top: 1px solid #D4D4D4;
 			padding-top: 30px;
 			height: 80px;
@@ -198,6 +264,7 @@
 		}
 		.sign{
 			margin: auto;
+			perspective: 1000px;
 			position: relative;
 			transform-style: preserve-3d;
 			perspective: 1000;
@@ -304,6 +371,12 @@
 		.sign a:focus{
 			text-decoration: none;
 		}
+		
+		
+		
+		
+		
+		
 		@keyframes loading-spinner {
 		  from {
 		    -webkit-transform: rotate(0deg);
