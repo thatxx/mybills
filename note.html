@@ -7,8 +7,11 @@
 		<title>账单明细</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css"/>
 		<script src="js/jquery-3.1.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<style type="text/css">
 		
@@ -30,11 +33,12 @@
 				},200);
 			});
 		});
+		
 	</script>
 	<body>
 		<div class="bigheadicon">
 		<div class="jumbotron myhead">
-			<nav class="navbar navbar-default mynav" role="navigation">
+				<nav class="navbar navbar-default mynav" role="navigation">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -44,15 +48,16 @@
 		        <span class="icon-bar" ></span>
 		        <span class="icon-bar" ></span>
 		      </button>
-		      <a class="navbar-brand" href="index.html"><i class="indexicon"></i> myBills</a>
+		      <a class="navbar-brand mya" href="index.html"><i class="indexicon"></i> myBills</a>
 		    </div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right myul">
-		        <li><a href="#">Features</a><span></span></li>
-		        <li><a href="#">FAQ</a><span></span></li>
-		        <li><a href="#">Contact</a><span></span></li>
+		        <li><a href="#" class="mya">Features</a><span></span></li>
+		        <li><a href="#" class="mya">FAQ</a><span></span></li>
+		        <li><a href="#" class="mya">Contact</a><span></span></li>
+		        <li><a href="" class="signout">Sign out</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -77,6 +82,38 @@
 		</div>
 <!--		
 		<div class="" style="border-top: 1px solid #D5D5D5;"></div>-->
+		<div class="container-fluid">
+		<form class="form-horizontal" role="form">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-2" style="position: relative;">
+					<div class="form-group">
+                	<label for="dtp1" class="sr-only">Date</label>
+                	<div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp1" data-link-format="yyyy-mm-dd">
+						<input style="background-color: #FFFFFF!important;" placeholder="Date" class="form-control" size="16" type="text" value="" readonly>
+                    	<span style="background-color: #FFFFFF!important;" class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                	</div>
+					<input type="hidden" id="dtp1" value="" /><br/>
+			  </div>
+				</div>
+			  <div class="col-xs-1"></div>
+			  <div class="form-group col-xs-1">
+			    <label for="Tag" class="sr-only">Tag</label>
+			    <input type="text" class="form-control" id="Tag" placeholder="Tag">
+			  </div>
+			  <div class="col-xs-1"></div>
+			  <div class="form-group col-xs-3">  
+			    <label class="sr-only" for="Description"></label>
+			    <input type="text" class="form-control" id="Description" placeholder="Description">
+			  </div>
+			  <div class="col-xs-1"></div>
+			  <div class="form-group col-xs-1">  
+			    <label class="sr-only" for="Sum"></label>
+			    <input type="text" class="form-control" id="Sum" placeholder="Sum">
+			  </div>
+			  <div class="col-xs-1"></div>
+			  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search""></span></button>
+			</form>
+		</div>
 		
 		<div class="container mycon">
 			<div class="row title" id="title">
@@ -112,6 +149,8 @@
 					</span>
 				</div>
 			</div>
+			
+			
 			<div class="row item">
 				<div class="col-lg-1 col-xs-1 col-md-1"></div>
 				<div class="col-lg-3 col-xs-3 col-md-3">
@@ -176,10 +215,25 @@
 		<div class="foot-black">
 			<div class="row">
 				<div class="col-md-4">
-					<span>Copyright © thatxx,All Rights Reserved </span>
+					<span>Copyright © thatxx,All Rights Reserved </span><br />
+					<span><span class="glyphicon glyphicon-thumbs-up"></span>&emsp;https://github.com/thatxx/mybills</span>
 				</div>
 				
 			</div>
 		</div>
+		<script type="text/javascript">
+		    $('.form_date').datetimepicker({
+		        language:  'zh-CN',
+		        format: "yyyy-mm-dd",
+		        weekStart: 1,
+		        todayBtn:  1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0,
+       			pickerPosition: "bottom-left"
+		    });
+		</script> 
 	</body>
 </html>
